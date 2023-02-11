@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Valid Form</title>
+</head>
+<body>
+    <div class="main">
+
+        <form action="#" method="POST" class="form" id="register-form">
+          <h3 class="heading">Đăng ký vào ứng dụng</h3>
+          <p class="desc">We will win to work together</p>
+      
+          <div class="spacer"></div>
+      
+          <div class="form-group">
+            <label for="fullname" class="form-label">Tên đầy đủ</label>
+            <input id="fullname" name="fullname" rules="required" type="text" placeholder="Vd: Hải Triều" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="text" rules="required|email" placeholder="VD: email@domain.com" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="password" class="form-label">Mật khẩu</label>
+            <input id="password" name="password" rules="required|min:6" type="password" placeholder="Nhập mật khẩu" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <div class="form-group">
+            <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+            <input id="password_confirmation" rules="required|min:6" name="password_confirmation" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+            <span class="form-message"></span>
+          </div>
+      
+          <button class="form-submit">Đăng ký</button>
+        </form>
+      
+      </div>
+
+      <script src="assets/js/valid.js"></script>
+      <script>
+          Validator('#register-form')
+
+      </script>
+    
+
+</body>
+</html>
